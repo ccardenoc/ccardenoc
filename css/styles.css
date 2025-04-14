@@ -1,0 +1,184 @@
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  padding-top: 1rem;
+}
+
+/* Custom utility classes */
+.apple-container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+/* Animations for mobile menu */
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-in-out forwards;
+}
+
+.animate-fade-out {
+  animation: fadeOut 0.2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Timeline styles */
+.font-medium {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+.timeline-content {
+  position: relative;
+  max-height: 4.5rem;
+  /* Show approximately 2 lines */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.timeline-content.expanded {
+  max-height: 1000px;
+  /* Large enough to show all content */
+}
+
+.timeline-content:not(.expanded)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2rem;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+  pointer-events: none;
+}
+
+.timeline-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: #6e6e73;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.timeline-toggle:hover {
+  color: #000000;
+}
+
+.timeline-toggle.expanded svg {
+  transform: rotate(180deg);
+}
+
+/* Tools section styling */
+.tools-section {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+.tools-section:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tools-section ul li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(243, 244, 246, 1);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.tools-section ul li:last-child {
+  border-bottom: none;
+}
+
+/* Certifications section styling */
+.certifications-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+.certifications-container:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.certifications-container ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(243, 244, 246, 1);
+}
+
+.certifications-container ul li:last-child {
+  border-bottom: none;
+}
+
+.certifications-container a {
+  font-weight: 500;
+}
+
+.certifications-container span {
+  color: rgba(107, 114, 128, 1);
+}
+
+/* Honors section styling */
+.honors-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+.honors-container:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.honor-item {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(243, 244, 246, 1);
+  margin-bottom: 1.5rem;
+}
+
+.honor-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.honor-item a {
+  font-weight: 500;
+}

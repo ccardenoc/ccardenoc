@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charly Cardeno | Product Manager</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+  <script src="js/tailwind-config.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="antialiased text-apple-gray-700">
+  <!-- Navigation Bar -->
+  <nav class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex-shrink-0">
+          <a href="#" class="font-bold text-xl text-apple-gray-900">Charly Cardeno</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" type="button"
+            class="text-apple-gray-600 hover:text-apple-gray-900 focus:outline-none p-2 rounded hover:bg-gray-100">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path id="mobile-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex md:items-center md:space-x-6">
+          <a href="#summary"
+            class="text-apple-gray-600 hover:text-apple-gray-900 px-3 py-2 text-sm font-medium transition duration-300">Summary</a>
+          <a href="#experience"
+            class="text-apple-gray-600 hover:text-apple-gray-900 px-3 py-2 text-sm font-medium transition duration-300">Experience</a>
+          <a href="#skills"
+            class="text-apple-gray-600 hover:text-apple-gray-900 px-3 py-2 text-sm font-medium transition duration-300">Skills</a>
+          <a href="#honors"
+            class="text-apple-gray-600 hover:text-apple-gray-900 px-3 py-2 text-sm font-medium transition duration-300">Honors</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu"
+      class="hidden md:hidden bg-white border-t border-apple-gray-200 shadow-lg w-full absolute top-16 left-0 right-0 z-50">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="#summary"
+          onclick="document.getElementById('mobile-menu').style.display = 'none'; document.getElementById('mobile-icon-path').setAttribute('d', 'M4 6h16M4 12h16M4 18h16');"
+          class="block px-3 py-2 text-base font-medium text-apple-gray-600 hover:text-apple-gray-900 hover:bg-apple-gray-100 transition duration-300">Summary</a>
+        <a href="#experience"
+          onclick="document.getElementById('mobile-menu').style.display = 'none'; document.getElementById('mobile-icon-path').setAttribute('d', 'M4 6h16M4 12h16M4 18h16');"
+          class="block px-3 py-2 text-base font-medium text-apple-gray-600 hover:text-apple-gray-900 hover:bg-apple-gray-100 transition duration-300">Experience</a>
+        <a href="#skills"
+          onclick="document.getElementById('mobile-menu').style.display = 'none'; document.getElementById('mobile-icon-path').setAttribute('d', 'M4 6h16M4 12h16M4 18h16');"
+          class="block px-3 py-2 text-base font-medium text-apple-gray-600 hover:text-apple-gray-900 hover:bg-apple-gray-100 transition duration-300">Skills</a>
+        <a href="#honors"
+          onclick="document.getElementById('mobile-menu').style.display = 'none'; document.getElementById('mobile-icon-path').setAttribute('d', 'M4 6h16M4 12h16M4 18h16');"
+          class="block px-3 py-2 text-base font-medium text-apple-gray-600 hover:text-apple-gray-900 hover:bg-apple-gray-100 transition duration-300">Honors</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="relative bg-white pt-16">
+    <div class="max-w-5xl mx-auto p-6 lg:px-8">
+      <div class="pt-10 md:pt-14 lg:pt-20 flex flex-col items-center text-center">
+        <img src="images/ProfilePictureCCardenoC-Completa 202406 Small.jpg" alt="Charly Cardeno"
+          class="w-36 h-36 rounded-full object-cover shadow-lg mb-6 transition-transform duration-300 hover:scale-105">
+        <h1 class="text-4xl font-bold text-apple-gray-900 mb-1">
+          Charly Cardeno
+          <a href="https://www.linkedin.com/in/ccardenoc/" target="_blank" rel="noopener"
+            class="inline-flex items-center align-middle ml-2">
+            <svg class="w-6 h-6 text-apple-gray-600 hover:text-apple-gray-900 transition duration-300"
+              fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </h1>
+        <p class="text-apple-gray-600 mb-4 px-4 text-center">
+          <span class="inline-block mx-2">Bogota, US Central Time</span>
+          <span class="inline-block mx-2">+573013716656</span>
+          <span class="inline-block mx-2">ccardenoc@gmail.com</span>
+        </p>
+        <!-- Certification badges -->
+        <div class="flex flex-wrap justify-center mt-4 gap-4">
+          <a href="https://www.credly.com/badges/aa692851-7db3-412d-9ac3-d9b1e32d785f/print" target="_blank"
+            class="transform hover:scale-105 transition duration-300">
+            <img src="images/certified-safe-6-product-owner-product-manager.png"
+              alt="SAFe Product Owner/Product Manager" class="h-16 md:h-20 w-auto">
+          </a>
+          <a href="https://bcert.me/bc/html/show-badge.html?b%3Dfvtrubyc" target="_blank"
+            class="transform hover:scale-105 transition duration-300">
+            <img src="images/scrum-alliance-cspo-600.webp" alt="Certified Scrum Product Owner"
+              class="h-16 md:h-20 w-auto">
+          </a>
+          <a href="https://cert.efset.org/A5YhqH" target="_blank"
+            class="transform hover:scale-105 transition duration-300">
+            <img src="images/EF-SET-C2-Proficient.png" alt="EF SET C2 Proficient English" class="h-16 md:h-20 w-auto">
+          </a>
+          <a href="https://drive.google.com/drive/folders/16d43UZRVDwz6l8k1jxgnFUWq2p28YVV3" target="_blank"
+            class="transform hover:scale-105 transition duration-300">
+            <img src="images/Certiprof_Scrum_Master_badge480x480_1440x1440.webp" alt="CertiProf Scrum Master"
+              class="h-16 md:h-20 w-auto">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    <hr class="border-apple-gray-200 my-8">
+
+    <!-- Summary Section -->
+    <section id="summary" class="mb-12 pt-4">
+      <h2 class="text-2xl font-bold text-apple-gray-900 mb-4">Summary</h2>
+      <p class="text-apple-gray-600 leading-relaxed">
+        B2B/B2C SaaS Product Manager with over 6 years of experience. I'm passionate about driving product growth
+        through Agile methodologies and maximizing ROI. I have a proven track record of successfully launching new
+        products and leading post-investment re-builds to unlock scalability.
+      </p>
+    </section>
+
+    <!-- Education & Work Experience Section -->
+    <section id="experience" class="mb-12 pt-4">
+      <h2 class="text-2xl font-bold text-apple-gray-900 mb-8">Education & Work Experience</h2>
+
+      <!-- Modern Timeline -->
+      <div class="relative">
+        <!-- Vertical line -->
+        <div class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-0.5 bg-apple-gray-300">
+        </div>
+
+        <!-- Trustshoring -->
+        <div class="relative mb-12">
+          <!-- Timeline dot -->
+          <div
+            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -top-1 w-6 h-6 rounded-full bg-apple-gray-700 shadow-md z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-white"></div>
+          </div>
+
+          <!-- Content container -->
+          <div class="ml-10 md:ml-0 relative md:grid md:grid-cols-2 md:gap-8 items-start">
+            <!-- Date -->
+            <div class="hidden md:block md:text-right pr-8">
+              <span
+                class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">March
+                2023 - Present</span>
+            </div>
+
+            <!-- Content -->
+            <div
+              class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-apple-gray-200 hover:shadow-md transition-shadow duration-300 md:col-start-2">
+              <div class="md:hidden mb-3">
+                <span
+                  class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">March
+                  2023 - Present</span>
+              </div>
+              <h3 class="text-xl font-semibold text-apple-gray-800 mb-2">Trustshoring</h3>
+              <p class="font-medium text-apple-gray-700 mb-3">Senior Business Analyst, remote from Colombia</p>
+              <div class="timeline-content text-apple-gray-600 leading-relaxed space-y-3">
+                <p>Worked on diverse projects across SaaS, education, and creative industries. Delivered Product
+                  Requirements, Technical Architectures, and Risk Plans to guide execution.</p>
+                <p>Key achievements include supporting a messaging app, an AI chat for students, a marketplace for
+                  Lightroom presets, and a script reader for actors. Currently improving workflows for a cloud-based
+                  client intake platform.</p>
+              </div>
+              <div class="timeline-toggle" onclick="toggleTimelineContent(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Publicis Sapient -->
+        <div class="relative mb-12">
+          <!-- Timeline dot -->
+          <div
+            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -top-1 w-6 h-6 rounded-full bg-apple-gray-700 shadow-md z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-white"></div>
+          </div>
+
+          <!-- Content container -->
+          <div class="ml-10 md:ml-0 relative md:grid md:grid-cols-2 md:gap-8 items-start">
+            <!-- Content (Left side in desktop) -->
+            <div
+              class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-apple-gray-200 hover:shadow-md transition-shadow duration-300 md:col-start-1">
+              <div class="md:hidden mb-3">
+                <span
+                  class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">June
+                  2022 - October 2024</span>
+              </div>
+              <h3 class="text-xl font-semibold text-apple-gray-800 mb-2">Publicis Sapient</h3>
+              <p class="font-medium text-apple-gray-700 mb-3">Product Manager, remote from Colombia</p>
+              <div class="timeline-content text-apple-gray-600 leading-relaxed space-y-3">
+                <p>Led cross-functional teams to deliver product improvements and streamline processes across finance,
+                  healthcare, and oil & gas sectors, focusing on efficiency, automation, and user satisfaction.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li><span class="font-medium">Healthcare:</span> Led the development of AI-driven solutions by
+                    integrating LLMs, boosting user satisfaction by 300% and saving 1,200+ hours per month through
+                    automation.</li>
+                  <li><span class="font-medium">Finance:</span> Reduced a cash account reconciliation process from 3
+                    hours to 30 minutes by designing an automated Excel tool, minimizing errors and improving accuracy.
+                  </li>
+                  <li><span class="font-medium">Oil & Gas:</span> Directed the implementation of a new security
+                    framework, reducing approval times by 82% and improving system integrity.</li>
+                </ul>
+              </div>
+              <div class="timeline-toggle" onclick="toggleTimelineContent(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Date (Right side in desktop) -->
+            <div class="hidden md:block md:pl-8">
+              <span
+                class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">June
+                2022 - October 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elemento 43 -->
+        <div class="relative mb-12">
+          <!-- Timeline dot -->
+          <div
+            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -top-1 w-6 h-6 rounded-full bg-apple-gray-700 shadow-md z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-white"></div>
+          </div>
+
+          <!-- Content container -->
+          <div class="ml-10 md:ml-0 relative md:grid md:grid-cols-2 md:gap-8 items-start">
+            <!-- Date (Left side in desktop) -->
+            <div class="hidden md:block md:text-right pr-8">
+              <span
+                class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">March
+                2019 - May 2022</span>
+            </div>
+
+            <!-- Content (Right side in desktop) -->
+            <div
+              class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-apple-gray-200 hover:shadow-md transition-shadow duration-300 md:col-start-2">
+              <div class="md:hidden mb-3">
+                <span
+                  class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">March
+                  2019 - May 2022</span>
+              </div>
+              <h3 class="text-xl font-semibold text-apple-gray-800 mb-2">Elemento 43</h3>
+              <p class="font-medium text-apple-gray-700 mb-3">Product Manager, hybrid from Colombia</p>
+              <div class="timeline-content text-apple-gray-600 leading-relaxed space-y-3">
+                <p>Led a team of 40+ developers for three B2B products in the Netherlands, focusing on strategic
+                  planning, execution, and optimization. Took products from 0 to 1 and scaled them for increased
+                  performance and user satisfaction.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>Automated data collection for an elevator auditing startup, reducing report generation from 5+
+                    days to seconds. Increased client onboarding by 50% in under a year.</li>
+                  <li>Rebuilt a school payment platform's architecture, enabling acquisition and expansion from 150 to
+                    2K schools, increasing monthly payments from 200K to over 3M.</li>
+                  <li>Led migration of a financial reconciliation platform from monolithic to microservices
+                    architecture, expanding capacity from 2M to 7M monthly transactions.</li>
+                </ul>
+              </div>
+              <div class="timeline-toggle" onclick="toggleTimelineContent(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fleks -->
+        <div class="relative mb-12">
+          <!-- Timeline dot -->
+          <div
+            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -top-1 w-6 h-6 rounded-full bg-apple-gray-700 shadow-md z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-white"></div>
+          </div>
+
+          <!-- Content container -->
+          <div class="ml-10 md:ml-0 relative md:grid md:grid-cols-2 md:gap-8 items-start">
+            <!-- Content (Left side in desktop) -->
+            <div
+              class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-apple-gray-200 hover:shadow-md transition-shadow duration-300 md:col-start-1">
+              <div class="md:hidden mb-3">
+                <span
+                  class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">March
+                  2018 - February 2019</span>
+              </div>
+              <h3 class="text-xl font-semibold text-apple-gray-800 mb-2">Fleks</h3>
+              <p class="font-medium text-apple-gray-700 mb-3">Product Owner, on-site in Amsterdam, Holland</p>
+              <div class="timeline-content text-apple-gray-600 leading-relaxed space-y-3">
+                <p>When I joined Fleks, a B2B SaaS startup for job agencies, the founders were down to their last €20K.
+                  I slept on the CEO's couch to help save money while turning the company around.</p>
+                <ul class="list-disc pl-5 space-y-2">
+                  <li>Replaced a €50/hr software house with €12/hr Colombian talent, extending runway from 2 to 8+
+                    months while improving output quality.</li>
+                  <li>Guided the team to reduce API response times from 30+ to under 2 seconds.</li>
+                  <li>Delivered a seamless user flow enabling growth from dozens to hundreds of users in the first year.
+                  </li>
+                </ul>
+              </div>
+              <div class="timeline-toggle" onclick="toggleTimelineContent(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+
+            <!-- Date (Right side in desktop) -->
+            <div class="hidden md:block md:pl-8">
+              <span
+                class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">March
+                2018 - February 2019</span>
+            </div>
+          </div>
+        </div>
+        <!-- Education - Universidad de Cartagena -->
+        <div class="relative mb-12">
+          <!-- Timeline dot -->
+          <div
+            class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 -top-1 w-6 h-6 rounded-full bg-apple-gray-700 shadow-md z-10 flex items-center justify-center">
+            <div class="w-3 h-3 rounded-full bg-white"></div>
+          </div>
+
+          <!-- Content container -->
+          <div class="ml-10 md:ml-0 relative md:grid md:grid-cols-2 md:gap-8 items-start">
+            <!-- Date (Left side in desktop) -->
+            <div class="hidden md:block md:text-right pr-8">
+              <span
+                class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">2013
+                - 2017</span>
+            </div>
+
+            <!-- Content (Right side in desktop) -->
+            <div
+              class="bg-white p-6 md:p-8 rounded-xl shadow-sm border border-apple-gray-200 hover:shadow-md transition-shadow duration-300 md:col-start-2">
+              <div class="md:hidden mb-3">
+                <span
+                  class="bg-apple-gray-100 text-apple-gray-700 font-medium px-3 py-1.5 rounded-full text-sm inline-block shadow-sm">2013
+                  - 2017</span>
+              </div>
+              <h3 class="text-xl font-semibold text-apple-gray-800 mb-2">Universidad de Cartagena</h3>
+              <p class="font-medium text-apple-gray-700 mb-3">Software Engineer</p>
+              <div class="timeline-content text-apple-gray-600 leading-relaxed space-y-3">
+                <p>Scientific and engineering aspects of computing, including programming, algorithms and data
+                  structures, computer architecture, database systems, computer simulations and data science.</p>
+              </div>
+              <div class="timeline-toggle" onclick="toggleTimelineContent(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline end dot -->
+        <div
+          class="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 bottom-0 w-6 h-6 rounded-full bg-apple-gray-700 shadow-md z-10 flex items-center justify-center">
+          <div class="w-3 h-3 rounded-full bg-white"></div>
+        </div>
+      </div>
+  </div>
+  </div>
+  </section>
+
+  <hr class="border-apple-gray-200 my-8">
+
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    <!-- Skills Section -->
+    <section id="skills" class="mb-8 pt-4">
+      <h2 class="text-2xl font-bold text-apple-gray-900 mb-6">Skills</h2>
+
+      <!-- Mobile-friendly skills display with better spacing -->
+      <div class="relative h-auto md:h-[450px] w-full bg-white p-6 rounded-xl overflow-hidden">
+        <!-- For mobile: Stack vertically with proper spacing -->
+        <div class="block md:hidden space-y-5">
+          <!-- Primary skills (large) -->
+          <div class="space-y-3">
+            <p
+              class="text-2xl font-bold text-apple-gray-700 transform hover:scale-105 hover:text-apple-gray-900 transition-all duration-300 ease-in-out">
+              Stakeholder Management</p>
+            <p
+              class="text-2xl font-bold text-apple-gray-700 transform hover:scale-105 hover:text-apple-gray-900 transition-all duration-300 ease-in-out">
+              Product Roadmapping</p>
+            <p
+              class="text-2xl font-bold text-apple-gray-700 transform hover:scale-105 hover:text-apple-gray-900 transition-all duration-300 ease-in-out">
+              Scrum / SAFe / Kanban</p>
+            <p
+              class="text-2xl font-bold text-apple-gray-700 transform hover:scale-105 hover:text-apple-gray-900 transition-all duration-300 ease-in-out">
+              Cross-Functional Team Leadership</p>
+            <p
+              class="text-2xl font-bold text-apple-gray-700 transform hover:scale-105 hover:text-apple-gray-900 transition-all duration-300 ease-in-out">
+              Release Planning</p>
+          </div>
+
+          <!-- Secondary skills (medium) -->
+          <div class="grid grid-cols-2 gap-3">
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Backlog Management</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              User Story Creation</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Customer Feedback Integration</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Data Visualization</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Risk Management</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              KPIs and Metrics Tracking</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Automation and Optimization</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Sprint Planning</p>
+            <p
+              class="text-lg font-semibold text-apple-gray-600 hover:text-apple-gray-800 transition-all duration-300 ease-in-out">
+              Data-Driven Decision Making</p>
+          </div>
+        </div>
+
+        <!-- Desktop: absolute positioning with hover effects -->
+        <div class="hidden md:block">
+          <!-- Most relevant skills - largest (4xl) -->
+          <span
+            class="absolute top-[8%] left-[8%] text-4xl font-bold text-apple-gray-700 transform hover:scale-110 hover:text-apple-gray-900 transition-all duration-300 ease-in-out hover:drop-shadow-sm">Stakeholder
+            Management</span>
+          <span
+            class="absolute top-[38%] left-[3%] text-4xl font-bold text-apple-gray-700 transform hover:scale-110 hover:text-apple-gray-900 transition-all duration-300 ease-in-out hover:drop-shadow-sm">Product
+            Roadmapping</span>
+          <span
+            class="absolute top-[68%] right-[5%] text-4xl font-bold text-apple-gray-700 transform hover:scale-110 hover:text-apple-gray-900 transition-all duration-300 ease-in-out hover:drop-shadow-sm">Scrum
+            / SAFe / Kanban</span>
+          <span
+            class="absolute bottom-[10%] left-[8%] text-4xl font-bold text-apple-gray-700 transform hover:scale-110 hover:text-apple-gray-900 transition-all duration-300 ease-in-out hover:drop-shadow-sm">Cross-Functional
+            Team Leadership</span>
+          <span
+            class="absolute top-[15%] right-[10%] text-4xl font-bold text-apple-gray-700 transform hover:scale-110 hover:text-apple-gray-900 transition-all duration-300 ease-in-out hover:drop-shadow-sm">Release
+            Planning</span>
+
+          <!-- Medium importance skills (2xl) -->
+          <span
+            class="absolute top-[28%] right-[28%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">Backlog
+            Management</span>
+          <span
+            class="absolute bottom-[30%] right-[15%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">User
+            Story
+            Creation</span>
+          <span
+            class="absolute top-[55%] left-[30%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">Customer
+            Feedback
+            Integration</span>
+          <span
+            class="absolute top-[35%] left-[50%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">Data
+            Visualization</span>
+          <span
+            class="absolute bottom-[20%] left-[45%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">Risk
+            Management</span>
+          <span
+            class="absolute top-[5%] left-[40%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">KPIs
+            and Metrics
+            Tracking</span>
+          <span
+            class="absolute bottom-[50%] left-[60%] text-2xl font-semibold text-apple-gray-600 hover:text-apple-gray-800 transform hover:scale-105 transition-all duration-300 ease-in-out">Automation
+            and
+            Optimization</span>
+
+          <!-- Smaller skills (xl) -->
+          <span
+            class="absolute top-[45%] right-[55%] text-xl font-medium text-apple-gray-500 hover:text-apple-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">Sprint
+            Planning</span>
+          <span
+            class="absolute top-[75%] right-[40%] text-xl font-medium text-apple-gray-500 hover:text-apple-gray-700 transform hover:scale-105 transition-all duration-300 ease-in-out">Data-Driven
+            Decision
+            Making</span>
+        </div>
+      </div>
+  </div>
+  </section>
+
+  <!-- Tools Section Removed -->
+
+  <!-- Certifications Section Removed -->
+
+  <!-- Honors & Achievements Section - Creative Version -->
+  <section id="honors" class="mb-12 pt-4 max-w-5xl mx-auto px-6 lg:px-8">
+    <h2 class="text-2xl font-bold text-apple-gray-900 mb-8">Journey & Impact</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Achievement Card 1 - Academic Impact -->
+      <div
+        class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300 border border-apple-gray-200 relative overflow-hidden group">
+        <div
+          class="absolute -right-10 -top-10 w-40 h-40 bg-apple-gray-200 opacity-20 rounded-full group-hover:scale-125 transition-all duration-500">
+        </div>
+        <div class="absolute right-3 top-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-apple-gray-500 opacity-80" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Academic Changemaker</h3>
+        <p class="text-apple-gray-700 font-medium mb-1">Universidad de Cartagena, 2024</p>
+        <p class="text-apple-gray-600 mb-4">Recognized for transformative contributions to the Software Engineering
+          program
+          curriculum and industry partnerships.</p>
+        <a href="https://drive.google.com/file/d/1ffF_tJcSrxRtWdderBd-22Rh270ZPuot/view" target="_blank" rel="noopener"
+          class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold group-hover:underline">
+          View Recognition
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Achievement Card 2 - Knowledge Sharing -->
+      <div
+        class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300 border border-apple-gray-200 relative overflow-hidden group">
+        <div
+          class="absolute -right-10 -top-10 w-40 h-40 bg-apple-gray-200 opacity-20 rounded-full group-hover:scale-125 transition-all duration-500">
+        </div>
+        <div class="absolute right-3 top-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-apple-gray-500 opacity-80" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Knowledge Catalyst</h3>
+        <p class="text-apple-gray-700 font-medium mb-1">Entrepreneurial Seminars, 2019-2023</p>
+        <p class="text-apple-gray-600 mb-4">Empowered 500+ engineering students with practical entrepreneurial
+          knowledge,
+          bridging academia and industry realities.</p>
+        <div class="flex space-x-3">
+          <a href="https://drive.google.com/drive/folders/1xQgDRs0FCZCXLkcCWD2HlBkYq0YEjwDP" target="_blank"
+            rel="noopener"
+            class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold group-hover:underline">
+            2023 Images
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a href="https://drive.google.com/file/d/1xuV7dtGoE1mjF3c18TphBZGjAIdyFFxC/view" target="_blank"
+            rel="noopener"
+            class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold group-hover:underline">
+            2019 Video
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Achievement Card 3 - Media Influence -->
+      <div
+        class="bg-white p-8 rounded-xl shadow-md transform hover:scale-105 transition-all duration-300 border border-apple-gray-200 relative overflow-hidden group">
+        <div
+          class="absolute -right-10 -top-10 w-40 h-40 bg-apple-gray-200 opacity-20 rounded-full group-hover:scale-125 transition-all duration-500">
+        </div>
+        <div class="absolute right-3 top-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-apple-gray-500 opacity-80" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Media & Thought Leadership</h3>
+        <p class="text-apple-gray-700 font-medium mb-1">Industry Voice, 2019-2021</p>
+        <p class="text-apple-gray-600 mb-4">Advocated for Latin American entrepreneurs in global tech conversations
+          through
+          media interviews and podcasts.</p>
+        <div class="flex space-x-3">
+          <a href="https://nearshoreamericas.com/us-visa-delays-latams-it-progress/" target="_blank" rel="noopener"
+            class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold group-hover:underline">
+            News Article
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a href="https://open.spotify.com/episode/5adETqRRRHMXfiFHGro3V3" target="_blank" rel="noopener"
+            class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold group-hover:underline">
+            Podcast
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Journey Timeline Visualization -->
+    <div class="mt-12 mb-6 relative">
+      <div class="h-1 bg-gradient-to-r from-apple-gray-300 via-apple-gray-500 to-apple-gray-700 rounded-full"></div>
+      <div class="flex justify-between mt-4">
+        <div class="text-center relative">
+          <div class="absolute -top-6 -left-1 w-3 h-3 bg-apple-gray-500 rounded-full"></div>
+          <p class="text-apple-gray-700 font-semibold">2019</p>
+          <p class="text-apple-gray-600 text-sm">First Seminar</p>
+        </div>
+        <div class="text-center relative">
+          <div class="absolute -top-6 -left-1 w-3 h-3 bg-apple-gray-600 rounded-full"></div>
+          <p class="text-apple-gray-700 font-semibold">2021</p>
+          <p class="text-apple-gray-600 text-sm">Media Spotlight</p>
+        </div>
+        <div class="text-center relative">
+          <div class="absolute -top-6 -left-1 w-3 h-3 bg-apple-gray-700 rounded-full"></div>
+          <p class="text-apple-gray-700 font-semibold">2023</p>
+          <p class="text-apple-gray-600 text-sm">Faculty Seminar</p>
+        </div>
+        <div class="text-center relative">
+          <div class="absolute -top-6 -left-1 w-3 h-3 bg-apple-gray-800 rounded-full"></div>
+          <p class="text-apple-gray-700 font-semibold">2024</p>
+          <p class="text-apple-gray-600 text-sm">Academic Honor</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-apple-gray-100 py-8 mt-12">
+    <div class="max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-apple-gray-500 text-sm mb-4 md:mb-0">© 2025 Charly Cardeno. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="https://www.linkedin.com/in/ccardenoc/" target="_blank" rel="noopener"
+            class="text-apple-gray-500 hover:text-apple-gray-900 transition duration-300 inline-flex items-center">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+          <a href="mailto:ccardenoc@gmail.com"
+            class="text-apple-gray-500 hover:text-apple-gray-900 transition duration-300">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- JavaScript for mobile menu toggle and timeline expansion -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
