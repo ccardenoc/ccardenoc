@@ -111,6 +111,43 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Compact tools section styling */
+.tools-category {
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #f5f5f7;
+}
+
+.tools-category:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* Enhancing the pill elements with hover effects */
+.tools-category .text-xs {
+  display: inline-flex;
+  align-items: center;
+  height: 1.75rem;
+  transition: all 0.2s ease;
+}
+
+.tools-category .text-xs:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments for different screen sizes */
+@media (max-width: 640px) {
+  .tools-category .flex.items-center {
+    margin-bottom: 0.75rem;
+  }
+
+  .tools-category .text-xs {
+    margin-bottom: 0.5rem;
+  }
+}
+
 .tools-section ul li {
   padding: 0.25rem 0;
   border-bottom: 1px solid rgba(243, 244, 246, 1);
@@ -181,4 +218,44 @@ body {
 
 .honor-item a {
   font-weight: 500;
+}
+
+/* Hide timeline dots and vertical line on small screens */
+@media (max-width: 767px) {
+
+  /* Hide the vertical line */
+  #experience .absolute.left-0.md\:left-1\/2.transform.md\:-translate-x-1\/2.top-0.h-full.w-0\.5.bg-apple-gray-300 {
+    display: none;
+  }
+
+  /* Hide all timeline dots */
+  #experience .absolute.left-0.md\:left-1\/2.transform.md\:-translate-x-1\/2.-top-1.w-6.h-6.rounded-full.bg-apple-gray-700,
+  #experience .absolute.left-0.md\:left-1\/2.transform.md\:-translate-x-1\/2.bottom-0.w-6.h-6.rounded-full.bg-apple-gray-700 {
+    display: none;
+  }
+}
+
+/* Full-width horizontal line */
+.full-width-hr {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border-top: 1px solid rgba(229, 231, 235, 1);
+}
+
+/* Fix for Journey & Impact section */
+#honors .text-xl.font-bold {
+  padding-right: 40px;
+  /* Add padding to the right of titles to prevent overlap with icons */
+}
+
+/* Remove unwanted left indentation in cards */
+#honors .bg-white.p-6 {
+  margin-left: 0;
+  /* Remove any left margin */
+  padding-left: 1.5rem;
+  /* Standardize left padding */
 }
