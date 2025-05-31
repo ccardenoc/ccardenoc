@@ -118,8 +118,8 @@ window.createSkillTag = function (container, tags) {
   tags.forEach(tag => {
     const span = document.createElement('span');
     span.classList.add(
-      'text-xs', 'bg-apple-gray-200', 'text-apple-gray-700',
-      'px-2.5', 'py-1', 'rounded-full', 'hover:bg-apple-gray-300',
+      'text-xs', 'bg-gray-700', 'text-gray-200',
+      'px-2.5', 'py-1', 'rounded-full', 'hover:bg-gray-600',
       'transition-colors', 'inline-block', 'mb-2', 'mr-2'
     );
     span.textContent = tag;
