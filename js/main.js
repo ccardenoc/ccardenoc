@@ -3,78 +3,51 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log('DOM fully loaded and parsed');
 
   // Initialize all components
-  initializeMobileMenu();
+  initializeHamburgerMenu();
   initializeNavLinks();
   initializeMobileNavLinks();
   initializeSkillTags();
   initializeSmoothScrolling();
 });
 
-// Mobile menu functionality
-function initializeMobileMenu() {
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
+// Simple Hamburger menu functionality
+function initializeHamburgerMenu() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
-  const mobileIconPath = document.getElementById('mobile-icon-path');
 
-  console.log('Mobile menu elements:', {
-    button: mobileMenuButton,
-    menu: mobileMenu,
-    iconPath: mobileIconPath
+  if (!hamburgerBtn || !mobileMenu) {
+    console.error('Hamburger menu elements not found');
+    return;
+  }
+
+  // Toggle menu function
+  function toggleMenu() {
+    hamburgerBtn.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  }
+
+  // Add click event to hamburger button
+  hamburgerBtn.addEventListener('click', function (e) {
+    e.preventDefault();
+    toggleMenu();
   });
 
-  if (mobileMenuButton && mobileMenu && mobileIconPath) {
-    // Add click event listener to menu button
-    mobileMenuButton.addEventListener('click', function (e) {
-      console.log('Mobile menu button clicked');
-      e.preventDefault();
-      e.stopPropagation();
+  // Close menu when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!hamburgerBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+      hamburgerBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
+    }
+  });
 
-      // Check current state
-      const isHidden = mobileMenu.classList.contains('hidden');
-      console.log('Menu is currently hidden:', isHidden);
-
-      // Toggle menu visibility
-      if (isHidden) {
-        console.log('Opening menu');
-        // Show menu
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.style.display = 'block';
-        // Add animation classes
-        mobileMenu.classList.add('animate-fade-in');
-        // Change to X icon
-        mobileIconPath.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-      } else {
-        console.log('Closing menu');
-        // Add animation classes
-        mobileMenu.classList.add('animate-fade-out');
-        // Wait for animation to complete before hiding
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.style.display = 'none';
-          mobileMenu.classList.remove('animate-fade-out', 'animate-fade-in');
-        }, 300);
-        // Change back to hamburger icon
-        mobileIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-      }
+  // Close menu when clicking a menu link
+  const menuLinks = mobileMenu.querySelectorAll('.mobile-menu-link');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function () {
+      hamburgerBtn.classList.remove('active');
+      mobileMenu.classList.remove('active');
     });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
-      // If menu is visible and click is outside menu and button
-      if (!mobileMenu.classList.contains('hidden') &&
-        !mobileMenu.contains(e.target) &&
-        !mobileMenuButton.contains(e.target)) {
-        console.log('Clicked outside menu, closing');
-        mobileMenu.classList.add('animate-fade-out');
-        setTimeout(() => {
-          mobileMenu.classList.add('hidden');
-          mobileMenu.style.display = 'none';
-          mobileMenu.classList.remove('animate-fade-out', 'animate-fade-in');
-        }, 300);
-        mobileIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-      }
-    });
-  }
+  });
 }
 
 // Initialize smooth scrolling
@@ -135,9 +108,12 @@ window.createNavLink = function (container, links) {
     a.href = link.href;
     a.textContent = link.text;
     a.classList.add(
-      'text-apple-gray-600', 'hover:text-apple-gray-900',
+      'text-apple-gray-100', 'hover:text-white',
       'px-3', 'py-2', 'text-sm', 'font-medium',
-      'transition', 'duration-300'
+      'transition', 'duration-300', 'relative',
+      'after:absolute', 'after:bottom-0', 'after:left-0', 'after:right-0',
+      'after:h-0.5', 'after:bg-white', 'after:transform', 'after:scale-x-0',
+      'after:origin-bottom-left', 'hover:after:scale-x-100', 'after:transition-transform', 'after:duration-200'
     );
     container.appendChild(a);
   });
@@ -155,26 +131,11 @@ window.createMobileNavLink = function (container, links) {
     a.textContent = link.text;
     a.classList.add(
       'block', 'px-3', 'py-2', 'text-base', 'font-medium',
-      'text-apple-gray-600', 'hover:text-apple-gray-900',
-      'hover:bg-apple-gray-100', 'transition', 'duration-300'
+      'text-apple-gray-700', 'hover:text-apple-gray-900',
+      'hover:bg-apple-gray-100', 'transition', 'duration-300',
+      'relative', 'border-l-transparent', 'border-l-2',
+      'hover:border-l-apple-gray-700'
     );
-
-    // Add onclick handler for mobile menu
-    a.addEventListener('click', function () {
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileIconPath = document.getElementById('mobile-icon-path');
-
-      if (mobileMenu && mobileIconPath) {
-        // Ensure menu is hidden using the class and style
-        mobileMenu.classList.add('hidden');
-        mobileMenu.style.display = 'none';
-        // Remove animation classes to prevent conflicts
-        mobileMenu.classList.remove('animate-fade-in', 'animate-fade-out');
-        // Change back to hamburger icon
-        mobileIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-      }
-    });
-
     container.appendChild(a);
   });
 };
