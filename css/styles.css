@@ -1,5 +1,11 @@
 /* Essential custom styles that can't be easily replaced with Tailwind */
 
+/* Prevent horizontal scrolling */
+html,
+body {
+  overflow-x: hidden;
+}
+
 /* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
@@ -56,14 +62,14 @@ html {
   transform: rotate(180deg);
 }
 
-/* Full-width horizontal line - Complex viewport calculation */
+/* Full-width horizontal line - Safe approach without horizontal overflow */
 .full-width-hr {
   position: relative;
-  width: 100vw;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
   border-top: 1px solid rgba(229, 231, 235, 1);
 }
 

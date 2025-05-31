@@ -41,7 +41,7 @@ function initializeHamburgerMenu() {
   });
 
   // Close menu when clicking a menu link
-  const menuLinks = mobileMenu.querySelectorAll('.mobile-menu-link');
+  const menuLinks = mobileMenu.querySelectorAll('a[href^="#"]');
   menuLinks.forEach(link => {
     link.addEventListener('click', function () {
       hamburgerBtn.classList.remove('active');
