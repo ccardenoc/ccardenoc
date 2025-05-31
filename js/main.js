@@ -165,7 +165,12 @@ window.createMobileNavLink = function (container, links) {
       const mobileIconPath = document.getElementById('mobile-icon-path');
 
       if (mobileMenu && mobileIconPath) {
+        // Ensure menu is hidden using the class and style
+        mobileMenu.classList.add('hidden');
         mobileMenu.style.display = 'none';
+        // Remove animation classes to prevent conflicts
+        mobileMenu.classList.remove('animate-fade-in', 'animate-fade-out');
+        // Change back to hamburger icon
         mobileIconPath.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
       }
     });
