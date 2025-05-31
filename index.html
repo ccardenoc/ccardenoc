@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/png">
-  <script src="js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tailwind-config.js?v=1.2"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.2">
 </head>
 
-<body class="antialiased text-apple-gray-700">
+<body class="antialiased text-apple-gray-700 font-inter bg-white pt-4">
   <!-- Navigation Bar -->
   <nav class="bg-apple-gray-700 shadow-sm fixed top-0 left-0 right-0 z-50">
     <div class="max-w-5xl mx-auto px-6 lg:px-8">
@@ -47,12 +47,18 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="mobile-menu">
-      <div class="mobile-menu-content">
-        <a href="#summary" class="mobile-menu-link">Summary</a>
-        <a href="#experience" class="mobile-menu-link">Experience</a>
-        <a href="#skills" class="mobile-menu-link">Skills</a>
-        <a href="#honors" class="mobile-menu-link">Journey & Impact</a>
+    <div id="mobile-menu"
+      class="mobile-menu absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+      <div class="p-4">
+        <a href="#summary"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 mb-1">Summary</a>
+        <a href="#experience"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 mb-1">Experience</a>
+        <a href="#skills"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 mb-1">Skills</a>
+        <a href="#honors"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900">Journey
+          & Impact</a>
       </div>
     </div>
   </nav>
@@ -614,11 +620,14 @@
                   d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Academic Changemaker</h3>
-            <p class="text-apple-gray-700 font-medium mb-1">Universidad de Cartagena, 2024</p>
-            <p class="text-apple-gray-600 mb-4">Recognized for transformative contributions to the Software
-              Engineering
-              program and industry partnerships.</p>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10 academic-changemaker-title">
+                Academic<span class="line-break">Changemaker</span></h3>
+              <p class="text-apple-gray-700 font-medium mb-1">Universidad de Cartagena, 2024</p>
+              <p class="text-apple-gray-600 mb-4">Recognized for transformative contributions to the Software
+                Engineering
+                program and industry partnerships.</p>
+            </div>
             <div class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold">
               View Recognition
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
@@ -641,10 +650,12 @@
                   d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Knowledge Catalyst</h3>
-            <p class="text-apple-gray-700 font-medium mb-1">Entrepreneurial Seminars, 2023</p>
-            <p class="text-apple-gray-600 mb-4">Empowered 500+ engineering students with practical entrepreneurial
-              knowledge, bridging academia and industry realities.</p>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Knowledge Catalyst</h3>
+              <p class="text-apple-gray-700 font-medium mb-1">Entrepreneurial Seminars, 2023</p>
+              <p class="text-apple-gray-600 mb-4">Empowered 500+ engineering students with practical entrepreneurial
+                knowledge, bridging academia and industry realities.</p>
+            </div>
             <div class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold">
               View Event Details
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
@@ -667,11 +678,13 @@
                   d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Media & Thought Leadership</h3>
-            <p class="text-apple-gray-700 font-medium mb-1">Industry Voice, 2021</p>
-            <p class="text-apple-gray-600 mb-4">Advocated for Latin American entrepreneurs in global tech
-              conversations
-              through media interviews and podcasts.</p>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Media & Thought Leadership</h3>
+              <p class="text-apple-gray-700 font-medium mb-1">Industry Voice, 2021</p>
+              <p class="text-apple-gray-600 mb-4">Advocated for Latin American entrepreneurs in global tech
+                conversations
+                through media interviews and podcasts.</p>
+            </div>
             <div class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold">
               News Article
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
@@ -694,11 +707,13 @@
                   d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Entrepreneurial Strategies</h3>
-            <p class="text-apple-gray-700 font-medium mb-1">Universidad de Cartagena, 2019</p>
-            <p class="text-apple-gray-600 mb-4">Presented key strategies for enhancing entrepreneurship to 300+
-              attendees,
-              covering financial management, leveraging opportunities, and building sustainable businesses.</p>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Entrepreneurial Strategies</h3>
+              <p class="text-apple-gray-700 font-medium mb-1">Universidad de Cartagena, 2019</p>
+              <p class="text-apple-gray-600 mb-4">Presented key strategies for enhancing entrepreneurship to 300+
+                attendees,
+                covering financial management, leveraging opportunities, and building sustainable businesses.</p>
+            </div>
             <div class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold">
               Watch Video
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
@@ -721,11 +736,13 @@
                   d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3 3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
               </svg>
             </div>
-            <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Podcast Guest Speaker</h3>
-            <p class="text-apple-gray-700 font-medium mb-1">AIESEC, 2019</p>
-            <p class="text-apple-gray-600 mb-4">Featured on the Live The Experience Podcast, sharing unique
-              perspectives
-              and insights on youth leadership and professional development.</p>
+            <div class="flex-grow">
+              <h3 class="text-xl font-bold text-apple-gray-900 mb-3 relative z-10">Podcast Guest Speaker</h3>
+              <p class="text-apple-gray-700 font-medium mb-1">AIESEC, 2019</p>
+              <p class="text-apple-gray-600 mb-4">Featured on the Live The Experience Podcast, sharing unique
+                perspectives
+                and insights on youth leadership and professional development.</p>
+            </div>
             <div class="inline-flex items-center text-apple-gray-700 hover:text-apple-gray-900 font-semibold">
               Listen to Episode
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
@@ -758,7 +775,7 @@
     </div>
   </footer>
   <!-- JavaScript for mobile menu toggle and timeline expansion -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=1.1"></script>
 </body>
 
 </html>

@@ -10,11 +10,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/png">
-  <script src="js/tailwind-config.js"></script>
-  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/tailwind-config.js?v=1.2"></script>
+  <link rel="stylesheet" href="css/styles.css?v=1.2">
 </head>
 
-<body class="antialiased text-apple-gray-700">
+<body class="antialiased text-apple-gray-700 font-inter bg-white">
   <!-- Navigation Bar -->
   <nav class="bg-apple-gray-700 shadow-sm fixed top-0 left-0 right-0 z-50">
     <div class="max-w-5xl mx-auto px-6 lg:px-8">
@@ -50,12 +50,18 @@
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="mobile-menu">
-      <div class="mobile-menu-content">
-        <a href="index.html" class="mobile-menu-link">Home</a>
-        <a href="index.html#experience" class="mobile-menu-link">Experience</a>
-        <a href="index.html#skills" class="mobile-menu-link">Skills</a>
-        <a href="index.html#honors" class="mobile-menu-link">Journey & Impact</a>
+    <div id="mobile-menu"
+      class="mobile-menu absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-50">
+      <div class="p-4">
+        <a href="index.html"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 mb-1">Home</a>
+        <a href="index.html#experience"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 mb-1">Experience</a>
+        <a href="index.html#skills"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900 mb-1">Skills</a>
+        <a href="index.html#honors"
+          class="block py-3 px-4 text-gray-700 font-medium rounded-md transition-all duration-200 hover:bg-gray-100 hover:text-gray-900">Journey
+          & Impact</a>
       </div>
     </div>
   </nav>
@@ -227,7 +233,7 @@
   </footer>
 
   <!-- JavaScript for mobile menu toggle -->
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=1.2"></script>
 </body>
 
 </html>
